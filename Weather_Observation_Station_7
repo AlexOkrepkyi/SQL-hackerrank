@@ -1,0 +1,4 @@
+# alternative way without regular expressions (WOS_7 file uses regexp)
+
+SELECT DISTINCT city FROM station 
+WHERE right (city, 1) IN ('a', 'o', 'u', 'e', 'i');
