@@ -1,4 +1,6 @@
 # far from being the most elegant way, but it works :)
+# the most difficult part was figuring out the joining part for both tables.
+
 
 SELECT Students.Name, Grades.Grade, Students.Marks FROM Students
 INNER JOIN Grades
