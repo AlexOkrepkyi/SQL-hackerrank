@@ -1,0 +1,7 @@
+# ^ stands for start
+# . stands for single character
+# * stands for 0 or more characters
+# $ stands for end
+
+SELECT DISTINCT city FROM station 
+WHERE lower(city) RLIKE '^[aeiou].*[aeiou]$';
