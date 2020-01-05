@@ -1,0 +1,4 @@
+# in case ^ is inside [], it means NOT
+
+SELECT DISTINCT city FROM station 
+WHERE lower(city) RLIKE '[^aeoui]$';
