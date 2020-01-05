@@ -1,0 +1,10 @@
+(SELECT city, length(city) FROM station
+ORDER BY length(city), city
+limit 1)
+
+UNION ALL
+
+(SELECT city, length(city) FROM station
+ORDER BY length(city) DESC, city
+limit 1);
+
