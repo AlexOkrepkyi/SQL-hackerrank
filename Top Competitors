@@ -1,0 +1,18 @@
+SELECT Hackers.hacker_id, Hackers.name FROM Submissions
+INNER JOIN Challenges ON Submissions.challenge_id = Challenges.challenge_id
+INNER JOIN Difficulty ON Challenges.difficulty_level = Difficulty.difficulty_level
+INNER JOIN Hackers ON Submissions.hacker_id = Hackers.hacker_id
+WHERE Submissions.score = Difficulty.score
+GROUP BY Hackers.hacker_id, Hackers.name
+HAVING count(Submissions.hacker_id) > 1
+ORDER BY count(Submissions.hacker_id) DESC, Submissions.hacker_id ASC;
+
+
+# line 1 - select
+# line 2 - join main table Submissions with table Challenges
+# line 3 - join main table Submissions with table Difficulty
+# line 4 - join main table Submissions with table Hackers
+# line 5 - score in Submissions table should corresond to the maximum possible score indicated in the Difficulty table
+# line 6 - group by the hackers_ID and name to get total amount of submissions by each hacker; should be grouped by both to be able to select both id and name in the output
+# line 7 - 'HAVING' applies to summarized group records, whereas 'WHERE' applies to individual records
+# line 8 - order by total number of submissions by each hacker_id and then by the hacker_id itself 
