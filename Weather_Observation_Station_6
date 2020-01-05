@@ -1,0 +1,6 @@
+# is a good way to learn about regular expression for MySQL case,
+# since most SQL papers are working with a common SQL.
+# Sarcastic Nicholas Page meme should pop up here :)
+
+SELECT DISTINCT city FROM station 
+WHERE lower(city) RLIKE '^[aeiou]';
