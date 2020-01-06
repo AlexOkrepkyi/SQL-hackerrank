@@ -6,5 +6,6 @@ ORDER BY N DESC;
 
 # line 1 - declaring a variable
 # line 2 - repeat string '* ' with N times in each row and each row increase by 1
+# line 2 - use 'information_schema.tables', since we have to work with a table; it is a table that provides information about tables in databases
 # line 3 - limit number of repetitions
 # line 4 - order by biggest N to the lowest N
