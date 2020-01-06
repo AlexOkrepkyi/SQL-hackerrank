@@ -1,0 +1,10 @@
+SET @N = 0;
+SELECT REPEAT('* ', @N := @N + 1) as N FROM information_schema.tables
+WHERE @N < 20
+ORDER BY N DESC;
+
+
+# line 1 - declaring a variable
+# line 2 - repeat string '* ' with N times in each row and each row increase by 1
+# line 3 - limit number of repetitions
+# line 4 - order by biggest N to the lowest N
